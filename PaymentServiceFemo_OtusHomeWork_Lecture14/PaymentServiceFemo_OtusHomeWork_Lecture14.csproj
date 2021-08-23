@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <AssemblyName>PaymentServiceDemo_OtusHomeWork_Lecture14</AssemblyName>
+    <RootNamespace>PaymentServiceDemo_OtusHomeWork_Lecture14</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonFunctions\COMMONFUNCTIONS_DLL.csproj" />
+    <ProjectReference Include="..\RIFDC\RIFDC_DLL.csproj" />
+  </ItemGroup>
+
+</Project>

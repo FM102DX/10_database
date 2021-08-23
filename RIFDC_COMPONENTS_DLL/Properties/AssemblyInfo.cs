@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
-[assembly: AssemblyTitle("CoffeePointsDemo")]
+[assembly: AssemblyTitle("RIFDC_COMPONENTS_DLL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CoffeePointsDemo")]
+[assembly: AssemblyProduct("RIFDC_COMPONENTS_DLL")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("1b24bdee-7264-4214-a879-44955fbed600")]
+[assembly: Guid("5074a4d2-fc26-4359-b7bc-4f56fa89c692")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

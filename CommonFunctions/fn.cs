@@ -12,10 +12,26 @@ using System.IO;
 namespace CommonFunctions
 {
 
-
-
     public static class fn
     {
+        
+        public static string getRandomWord(string[] input)
+        {
+            if (input.Length == 0) return "";
+
+            Random random = new Random();
+            int no = random.Next(0, input.Length+1);
+            if (no > input.Length - 1) no = input.Length - 1;
+            return input[no];
+        }
+
+        public static double getRandomDouble(double min, double max)
+        {
+            Random random = new Random();
+            double no = min + random.NextDouble()*(max-min);
+            return no;
+        }
+
         public class CommonOperationResult
         {
             //результат, возвращаемый после операций в объектном слое
@@ -34,6 +50,7 @@ namespace CommonFunctions
 
             public static CommonOperationResult returnValue(object _returningValue = null) { return getInstance(true, "", _returningValue); }
             public static CommonOperationResult sayFail(string _msg = "") { return getInstance(false, _msg, null); }
+            public static CommonOperationResult sayOk(string _msg = "") { return getInstance(true, _msg, null); }
             public static CommonOperationResult sayItsNull(string _msg = "") { return getInstance(true, _msg, null); }
         }
 
@@ -231,6 +248,14 @@ namespace CommonFunctions
 
 
         }
+
+        public static string getStringArrayDump(string[] arr)
+        {
+            return string.Join(";", arr);
+        }
+
+        
+
 
         public static string generate4blockGUID()
         {

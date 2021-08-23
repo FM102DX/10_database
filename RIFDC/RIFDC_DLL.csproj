@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>RIFDC</RootNamespace>
     <AssemblyName>RIFDC</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,7 +70,6 @@
     <Compile Include="RIFDC\Core\Logic layer\RIFDC_base.cs" />
     <Compile Include="RIFDC\Core\Logic layer\RIFDC_base2.cs" />
     <Compile Include="RIFDC\Core\Logic layer\Validation\RIFDC_validation_functions.cs" />
-    <Compile Include="RIFDC\Service\ObjectParameterEngine.cs" />
     <Compile Include="RIFDC\Service\RIFDC_lib.cs" />
     <Compile Include="RIFDC\Core\Logic layer\Validation\RIFDC_validation.cs" />
     <Compile Include="RIFDC\Core\Logic layer\History\HistoryManagerFrm.cs">

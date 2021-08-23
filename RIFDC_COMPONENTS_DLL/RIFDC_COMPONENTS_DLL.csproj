@@ -4,17 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B24BDEE-7264-4214-A879-44955FBED600}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>CoffeePointsDemo</RootNamespace>
-    <AssemblyName>CoffeePointsDemo</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <ProjectGuid>{5074A4D2-FC26-4359-B7BC-4F56FA89C692}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RIFDCComponents</RootNamespace>
+    <AssemblyName>RIFDC_COMPONENTS_DLL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,26 +49,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessObjDef.cs" />
-    <Compile Include="MainFrm.cs">
+    <Compile Include="ExcelFlatObjectReader\Definitions.cs" />
+    <Compile Include="ExcelFlatObjectReader\ExcelObjectReader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainFrm.Designer.cs">
-      <DependentUpon>MainFrm.cs</DependentUpon>
+    <Compile Include="ExcelFlatObjectReader\ExcelObjectReader.Designer.cs">
+      <DependentUpon>ExcelObjectReader.cs</DependentUpon>
     </Compile>
-    <Compile Include="CoffeePointsFrm.cs">
+    <Compile Include="ExcelTreeViewBasedObjectReaderComponent\Definition.cs" />
+    <Compile Include="ExcelTreeViewBasedObjectReaderComponent\ExcelTreeViewBasedObjectReader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CoffeePointsFrm.Designer.cs">
-      <DependentUpon>CoffeePointsFrm.cs</DependentUpon>
+    <Compile Include="ExcelTreeViewBasedObjectReaderComponent\ExcelTreeViewBasedObjectReader.Designer.cs">
+      <DependentUpon>ExcelTreeViewBasedObjectReader.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CoffeePointsFrm.resx">
-      <DependentUpon>CoffeePointsFrm.cs</DependentUpon>
+    <EmbeddedResource Include="ExcelFlatObjectReader\ExcelObjectReader.resx">
+      <DependentUpon>ExcelObjectReader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainFrm.resx">
-      <DependentUpon>MainFrm.cs</DependentUpon>
+    <EmbeddedResource Include="ExcelTreeViewBasedObjectReaderComponent\ExcelTreeViewBasedObjectReader.resx">
+      <DependentUpon>ExcelTreeViewBasedObjectReader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -98,9 +102,6 @@
       <Project>{895da7db-42e4-4e17-bcae-85e08df3e800}</Project>
       <Name>RIFDC_DLL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="log_data.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
