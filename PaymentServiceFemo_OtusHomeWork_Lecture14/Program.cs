@@ -112,21 +112,6 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
             Logger.fileName = @"..\..\..\PaymentServiceLogs.txt";
             Logger.prepare();
             
-            /*
-            
-            MySqlCluster.connectionData.server = "37.140.192.97";
-            //cls_mysql.connectionData.port = "3306";
-            MySqlCluster.connectionData.dbName = "u1325524_paymentservicedemo";
-            MySqlCluster.connectionData.dbUser = "u1325524_paymentservicedemo_user01";
-            MySqlCluster.connectionData.dbPassword = "2qT5!d6i";
-
-            RIFDC_App.mainDataRoom = MainDataRoom;
-            RIFDC_App.currentUserId = "user01";
-
-            MainDataRoom.actualCluster = MySqlCluster;
-
-            */
-
             Lib.DbOperationResult or = MainDataRoom.connect();
 
             if (!or.success)
