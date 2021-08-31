@@ -1,5 +1,5 @@
 DB_EXECUTING QUERY: drop table Merchants
-DB_RESULT IS: 0
+DB_ERRROR: Unknown table 'u1325524_paymentservicedemo.merchants'
 DB_EXECUTING QUERY: CREATE TABLE Merchants (id  VARCHAR(50) NOT NULL UNIQUE)
 DB_RESULT IS : 0
 DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN createdDateTime  DATETIME NULL 
@@ -8,13 +8,13 @@ DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN createdByUserId  TEXT NULL
 DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN FullName  TEXT NOT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN INN  TEXT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN description  TEXT NULL 
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-BNG3-5XJ3-1MBD-UFTC','2021.08.23 01.53.51',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-M2EZ-8RGY-EGL4-LT0O','2021.08.23 01.53.51',NULL,'user01','ООО Магазин Пятерочка','4543186966514','Это наша Пятерка')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-NVGK-5QUV-QTFX-16DH','2021.08.23 01.53.51',NULL,'user01','ООО Леруа Мерлен СПб','890328903248','Это Леруа, в который мы все время ездим')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-BY9W-FMHT-HRYY-LPRI','2021.08.23 01.53.51',NULL,'user01','ООО Бутик Картин СПб','55908098908','Это люди, которые продают картины через интернет')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-WWZ9-9JH6-ITJP-MS7I','2021.08.23 01.53.51',NULL,'user01','ООО Вимос','2132188521','В этом магазине я покупал косилку')
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-A7FA-WHRZ-ZB8L-D5I4','2021.08.23 23.51.35',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-26ZZ-PN05-L9E7-1B7V','2021.08.23 23.51.35',NULL,'user01','ООО Магазин Пятерочка','4543186966514','Это наша Пятерка')
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-IHG7-E0GY-6G0A-9APP','2021.08.23 23.51.35',NULL,'user01','ООО Леруа Мерлен СПб','890328903248','Это Леруа, в который мы все время ездим')
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-LOC2-GZRW-HKZX-DU7X','2021.08.23 23.51.35',NULL,'user01','ООО Бутик Картин СПб','55908098908','Это люди, которые продают картины через интернет')
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-END5-YL0B-ZA2I-XZ5K','2021.08.23 23.51.35',NULL,'user01','ООО Вимос','2132188521','В этом магазине я покупал косилку')
 DB_EXECUTING QUERY: drop table Contracts
-DB_RESULT IS: 0
+DB_ERRROR: Unknown table 'u1325524_paymentservicedemo.contracts'
 DB_EXECUTING QUERY: CREATE TABLE Contracts (id  VARCHAR(50) NOT NULL UNIQUE)
 DB_RESULT IS : 0
 DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN createdDateTime  DATETIME NULL 
@@ -24,13 +24,13 @@ DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN merchantId  TEXT NOT NULL
 DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractNumber  TEXT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractSignDate  DATETIME NOT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractExiryDate  DATETIME NULL 
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-B7BF-HEI2-QDOW-C2GY','2021.08.23 01.53.52',NULL,'user01','Merchant-BNG3-5XJ3-1MBD-UFTC','Contract-DE2X','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-JJNP-R1B9-6AHQ-ZX8V','2021.08.23 01.53.52',NULL,'user01','Merchant-M2EZ-8RGY-EGL4-LT0O','Contract-UQVG','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-8BN3-O1H2-PWKW-WH3Z','2021.08.23 01.53.52',NULL,'user01','Merchant-NVGK-5QUV-QTFX-16DH','Contract-QO2K','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-OWSX-JEGY-H94Y-31VB','2021.08.23 01.53.52',NULL,'user01','Merchant-BY9W-FMHT-HRYY-LPRI','Contract-ZA52','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-FJI9-YFQU-3GVC-9NME','2021.08.23 01.53.52',NULL,'user01','Merchant-WWZ9-9JH6-ITJP-MS7I','Contract-0C3S','2021.08.23','2021.08.23')
+DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-IC6W-6T1A-YADF-6J8S','2021.08.23 23.51.37',NULL,'user01','Merchant-A7FA-WHRZ-ZB8L-D5I4','Contract-TYWM','2021.08.23','2021.08.23')
+DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-OP9V-3JOA-7VX9-AJWQ','2021.08.23 23.51.37',NULL,'user01','Merchant-26ZZ-PN05-L9E7-1B7V','Contract-OODO','2021.08.23','2021.08.23')
+DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-970Q-KNYF-ADRM-7Y9Y','2021.08.23 23.51.37',NULL,'user01','Merchant-IHG7-E0GY-6G0A-9APP','Contract-VHPW','2021.08.23','2021.08.23')
+DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-H59D-SGGI-SKVM-YC0Z','2021.08.23 23.51.37',NULL,'user01','Merchant-LOC2-GZRW-HKZX-DU7X','Contract-7ZRO','2021.08.23','2021.08.23')
+DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-QIEC-Z5G1-TI5G-2NT8','2021.08.23 23.51.37',NULL,'user01','Merchant-END5-YL0B-ZA2I-XZ5K','Contract-69OX','2021.08.23','2021.08.23')
 DB_EXECUTING QUERY: drop table Transactions
-DB_RESULT IS: 0
+DB_ERRROR: Unknown table 'u1325524_paymentservicedemo.transactions'
 DB_EXECUTING QUERY: CREATE TABLE Transactions (id  VARCHAR(50) NOT NULL UNIQUE)
 DB_RESULT IS : 0
 DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN createdDateTime  DATETIME NULL 
@@ -40,18 +40,76 @@ DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN mechantId  TEXT NOT NULL
 DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN amount  DOUBLE NOT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN operationTypeId  TEXT NOT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN paymentMethodId  TEXT NOT NULL 
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-UEH6-Z89U-CPXB-G8D7','2021.08.23 01.53.54',NULL,'user01','newMechantId',3.62714007665736,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-G7ST-SVNU-WIY4-IRDW','2021.08.23 01.53.54',NULL,'user01','newMechantId',198.811879939778,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-54XR-B7IH-KX7J-ROO5','2021.08.23 01.53.54',NULL,'user01','newMechantId',393.996619802898,'Payment','PaymentSystem')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-DX5C-52V8-0XJR-JELU','2021.08.23 01.53.54',NULL,'user01','newMechantId',589.181359666018,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-LBGL-KW5J-YKI5-YECI','2021.08.23 01.53.54',NULL,'user01','newMechantId',947.986386692145,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-331V-VA0D-JY0O-X18F','2021.08.23 01.53.54',NULL,'user01','newMechantId',143.171126555265,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-LM7Q-HDUQ-1WOV-T0KW','2021.08.23 01.53.54',NULL,'user01','newMechantId',501.976153581392,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-UBXQ-N09L-LDCW-5QW7','2021.08.23 01.53.54',NULL,'user01','newMechantId',697.160893444512,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-MDTL-GWA0-JK39-WFTT','2021.08.23 01.53.54',NULL,'user01','newMechantId',892.345633307633,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-ND4V-DS1V-NWFE-A7VL','2021.08.23 01.53.54',NULL,'user01','newMechantId',609.955687359886,'Payment','SberbankOnline')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-VRAV-W9EG-TN69-0HC1','2021.08.23 23.51.38',NULL,'user01','newMechantId',184.220731344177,'Payment','CardPayment')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-ZW6Q-7XAA-3XD6-FE33','2021.08.23 23.51.38',NULL,'user01','newMechantId',543.025758370303,'Payment','SberbankOnline')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-9QMY-09LQ-E8SM-9GAM','2021.08.23 23.51.38',NULL,'user01','newMechantId',379.405471207297,'Payment','PaymentSystem')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-GDRF-RCA7-R919-5HBP','2021.08.23 23.51.38',NULL,'user01','newMechantId',97.0155252595504,'Payment','CardPayment')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-UDAJ-4OB0-KPM9-FYBW','2021.08.23 23.51.38',NULL,'user01','newMechantId',933.395238096544,'Payment','SberbankOnline')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-W10B-XXL6-QPH0-HMU6','2021.08.23 23.51.38',NULL,'user01','newMechantId',292.200265122671,'Payment','PaymentSystem')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-6C16-G0R2-C14C-ZB23','2021.08.23 23.51.38',NULL,'user01','newMechantId',487.385004985791,'Payment','PaymentSystem')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-8FNE-QA26-1D3P-GKS8','2021.08.23 23.51.38',NULL,'user01','newMechantId',846.190032011918,'Payment','SberbankOnline')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-4QDC-6EQ5-K895-3JHO','2021.08.23 23.51.38',NULL,'user01','newMechantId',41.3747718750382,'Payment','CardPayment')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-WN2B-8QP6-K5EC-7CV1','2021.08.23 23.51.38',NULL,'user01','newMechantId',400.179798901165,'Payment','PaymentSystem')
+DB_Executing query=Select * from Merchants 
+DB_Result is: hasRows=True
+_Merchant-26ZZ-PN05-L9E7-1B7V ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
+_Merchant-A7FA-WHRZ-ZB8L-D5I4 ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
+_Merchant-END5-YL0B-ZA2I-XZ5K ООО Вимос 2132188521  В этом магазине я покупал косилку
+_Merchant-IHG7-E0GY-6G0A-9APP ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
+_Merchant-LOC2-GZRW-HKZX-DU7X ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
+DB_Executing query=Select * from Contracts 
+DB_Result is: hasRows=True
+_Contract-970Q-KNYF-ADRM-7Y9Y Merchant-IHG7-E0GY-6G0A-9APP Contract-VHPW 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-H59D-SGGI-SKVM-YC0Z Merchant-LOC2-GZRW-HKZX-DU7X Contract-7ZRO 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-IC6W-6T1A-YADF-6J8S Merchant-A7FA-WHRZ-ZB8L-D5I4 Contract-TYWM 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-OP9V-3JOA-7VX9-AJWQ Merchant-26ZZ-PN05-L9E7-1B7V Contract-OODO 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-QIEC-Z5G1-TI5G-2NT8 Merchant-END5-YL0B-ZA2I-XZ5K Contract-69OX 01.01.0001 0:00:00 01.01.0001 0:00:00
+DB_Executing query=Select * from Transactions 
+DB_Result is: hasRows=True
+_Transaction-4QDC-6EQ5-K895-3JHO  41,3747718750382 Payment CardPayment
+_Transaction-6C16-G0R2-C14C-ZB23  487,385004985791 Payment PaymentSystem
+_Transaction-8FNE-QA26-1D3P-GKS8  846,190032011918 Payment SberbankOnline
+_Transaction-9QMY-09LQ-E8SM-9GAM  379,405471207297 Payment PaymentSystem
+_Transaction-GDRF-RCA7-R919-5HBP  97,0155252595504 Payment CardPayment
+_Transaction-UDAJ-4OB0-KPM9-FYBW  933,395238096544 Payment SberbankOnline
+_Transaction-VRAV-W9EG-TN69-0HC1  184,220731344177 Payment CardPayment
+_Transaction-W10B-XXL6-QPH0-HMU6  292,200265122671 Payment PaymentSystem
+_Transaction-WN2B-8QP6-K5EC-7CV1  400,179798901165 Payment PaymentSystem
+_Transaction-ZW6Q-7XAA-3XD6-FE33  543,025758370303 Payment SberbankOnline
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-I5HJ-7073-ZS4S-A6DS','2021.08.23 23.53.21',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-6P32-SQAO-AH1B-AN8H','2021.08.23 23.53.23',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
+DB_Executing query=Select * from Merchants 
+DB_Result is: hasRows=True
+_Merchant-26ZZ-PN05-L9E7-1B7V ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
+_Merchant-6P32-SQAO-AH1B-AN8H ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
+_Merchant-A7FA-WHRZ-ZB8L-D5I4 ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
+_Merchant-END5-YL0B-ZA2I-XZ5K ООО Вимос 2132188521  В этом магазине я покупал косилку
+_Merchant-I5HJ-7073-ZS4S-A6DS ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
+_Merchant-IHG7-E0GY-6G0A-9APP ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
+_Merchant-LOC2-GZRW-HKZX-DU7X ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
+DB_Executing query=Select * from Contracts 
+DB_Result is: hasRows=True
+_Contract-970Q-KNYF-ADRM-7Y9Y Merchant-IHG7-E0GY-6G0A-9APP Contract-VHPW 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-H59D-SGGI-SKVM-YC0Z Merchant-LOC2-GZRW-HKZX-DU7X Contract-7ZRO 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-IC6W-6T1A-YADF-6J8S Merchant-A7FA-WHRZ-ZB8L-D5I4 Contract-TYWM 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-OP9V-3JOA-7VX9-AJWQ Merchant-26ZZ-PN05-L9E7-1B7V Contract-OODO 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-QIEC-Z5G1-TI5G-2NT8 Merchant-END5-YL0B-ZA2I-XZ5K Contract-69OX 01.01.0001 0:00:00 01.01.0001 0:00:00
+DB_Executing query=Select * from Transactions 
+DB_Result is: hasRows=True
+_Transaction-4QDC-6EQ5-K895-3JHO  41,3747718750382 Payment CardPayment
+_Transaction-6C16-G0R2-C14C-ZB23  487,385004985791 Payment PaymentSystem
+_Transaction-8FNE-QA26-1D3P-GKS8  846,190032011918 Payment SberbankOnline
+_Transaction-9QMY-09LQ-E8SM-9GAM  379,405471207297 Payment PaymentSystem
+_Transaction-GDRF-RCA7-R919-5HBP  97,0155252595504 Payment CardPayment
+_Transaction-UDAJ-4OB0-KPM9-FYBW  933,395238096544 Payment SberbankOnline
+_Transaction-VRAV-W9EG-TN69-0HC1  184,220731344177 Payment CardPayment
+_Transaction-W10B-XXL6-QPH0-HMU6  292,200265122671 Payment PaymentSystem
+_Transaction-WN2B-8QP6-K5EC-7CV1  400,179798901165 Payment PaymentSystem
+_Transaction-ZW6Q-7XAA-3XD6-FE33  543,025758370303 Payment SberbankOnline
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-NIW7-C8Q6-Q8MQ-W75N','2021.08.23 23.53.50',NULL,'user01','newMechantId',308.299625901645,'Payment','PaymentSystem')
+DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-TWF2-JFP8-86LT-DT2D','2021.08.23 23.53.59',NULL,'user01','Merchant-ZZZ-ZZZZ-ZZZZ-ZZZZ','Contract-1WFS','2021.08.23','2021.08.23')
 DB_EXECUTING QUERY: drop table Merchants
-DB_RESULT IS: 0
+DB_ERRROR: Unknown table 'u1325524_paymentservicedemo.merchants'
 DB_EXECUTING QUERY: CREATE TABLE Merchants (id  VARCHAR(50) NOT NULL UNIQUE)
 DB_RESULT IS : 0
 DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN createdDateTime  DATETIME NULL 
@@ -60,13 +118,13 @@ DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN createdByUserId  TEXT NULL
 DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN FullName  TEXT NOT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN INN  TEXT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN description  TEXT NULL 
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-7TIW-Z8PH-5FL5-NG21','2021.08.23 10.18.37',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-M1C0-HRMY-549B-7QSU','2021.08.23 10.18.37',NULL,'user01','ООО Магазин Пятерочка','4543186966514','Это наша Пятерка')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-RR0D-N3K0-NIXQ-6HRB','2021.08.23 10.18.37',NULL,'user01','ООО Леруа Мерлен СПб','890328903248','Это Леруа, в который мы все время ездим')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-RPC6-2M7Q-GT15-8NKP','2021.08.23 10.18.37',NULL,'user01','ООО Бутик Картин СПб','55908098908','Это люди, которые продают картины через интернет')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-W0O5-QYOT-QLN8-462X','2021.08.23 10.18.37',NULL,'user01','ООО Вимос','2132188521','В этом магазине я покупал косилку')
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-2M8N-KBAA-LIKT-2MB0','2021.08.30 14.44.05',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-HSOS-AE4D-CSQG-W61M','2021.08.30 14.44.05',NULL,'user01','ООО Магазин Пятерочка','4543186966514','Это наша Пятерка')
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-OKZU-T3T0-8F0S-02MG','2021.08.30 14.44.05',NULL,'user01','ООО Леруа Мерлен СПб','890328903248','Это Леруа, в который мы все время ездим')
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-570B-EY2X-R4L2-V3OO','2021.08.30 14.44.05',NULL,'user01','ООО Бутик Картин СПб','55908098908','Это люди, которые продают картины через интернет')
+DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-R7FS-WQGO-8XT4-OLMJ','2021.08.30 14.44.06',NULL,'user01','ООО Вимос','2132188521','В этом магазине я покупал косилку')
 DB_EXECUTING QUERY: drop table Contracts
-DB_RESULT IS: 0
+DB_ERRROR: Unknown table 'u1325524_paymentservicedemo.contracts'
 DB_EXECUTING QUERY: CREATE TABLE Contracts (id  VARCHAR(50) NOT NULL UNIQUE)
 DB_RESULT IS : 0
 DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN createdDateTime  DATETIME NULL 
@@ -76,13 +134,13 @@ DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN merchantId  TEXT NOT NULL
 DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractNumber  TEXT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractSignDate  DATETIME NOT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractExiryDate  DATETIME NULL 
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-8H3G-3WV2-ATQR-88WK','2021.08.23 10.18.38',NULL,'user01','Merchant-7TIW-Z8PH-5FL5-NG21','Contract-M8US','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-UNAW-CW4Z-N1R4-FKGV','2021.08.23 10.18.38',NULL,'user01','Merchant-M1C0-HRMY-549B-7QSU','Contract-1DTA','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-CP6V-89HF-I3WC-LH5X','2021.08.23 10.18.38',NULL,'user01','Merchant-RR0D-N3K0-NIXQ-6HRB','Contract-XXC9','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-1A1Z-OUWX-P71C-ED58','2021.08.23 10.18.38',NULL,'user01','Merchant-RPC6-2M7Q-GT15-8NKP','Contract-D0SE','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-OXKK-PFJS-D4ZU-0CYD','2021.08.23 10.18.38',NULL,'user01','Merchant-W0O5-QYOT-QLN8-462X','Contract-8UQV','2021.08.23','2021.08.23')
+DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-1LB3-X4TO-1LCQ-F7JG','2021.08.30 14.44.07',NULL,'user01','Merchant-2M8N-KBAA-LIKT-2MB0','Contract-GJLY','2021.08.30','2021.08.30')
+DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-SPDC-KTWM-0675-X1UU','2021.08.30 14.44.07',NULL,'user01','Merchant-HSOS-AE4D-CSQG-W61M','Contract-RCVL','2021.08.30','2021.08.30')
+DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-O57Z-4G58-PJVV-2MD8','2021.08.30 14.44.07',NULL,'user01','Merchant-OKZU-T3T0-8F0S-02MG','Contract-26GP','2021.08.30','2021.08.30')
+DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-6YQ2-34ZV-AI95-HAJ1','2021.08.30 14.44.07',NULL,'user01','Merchant-570B-EY2X-R4L2-V3OO','Contract-4P2R','2021.08.30','2021.08.30')
+DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-14YE-5LF9-ZGRD-SGS3','2021.08.30 14.44.07',NULL,'user01','Merchant-R7FS-WQGO-8XT4-OLMJ','Contract-HENO','2021.08.30','2021.08.30')
 DB_EXECUTING QUERY: drop table Transactions
-DB_RESULT IS: 0
+DB_ERRROR: Unknown table 'u1325524_paymentservicedemo.transactions'
 DB_EXECUTING QUERY: CREATE TABLE Transactions (id  VARCHAR(50) NOT NULL UNIQUE)
 DB_RESULT IS : 0
 DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN createdDateTime  DATETIME NULL 
@@ -92,468 +150,117 @@ DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN mechantId  TEXT NOT NULL
 DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN amount  DOUBLE NOT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN operationTypeId  TEXT NOT NULL 
 DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN paymentMethodId  TEXT NOT NULL 
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-8SL4-43C5-BGOK-GSFQ','2021.08.23 10.18.39',NULL,'user01','newMechantId',584.902304031375,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-G3XQ-3US2-K8RB-GO5J','2021.08.23 10.18.39',NULL,'user01','newMechantId',302.512358083628,'Payment','PaymentSystem')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-PKF9-X6DV-UPIJ-09MV','2021.08.23 10.18.39',NULL,'user01','newMechantId',497.697097946749,'Payment','PaymentSystem')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-ZIN6-OHKN-9ST5-LBYX','2021.08.23 10.18.39',NULL,'user01','newMechantId',856.502124972875,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-KF45-MF2K-0C5N-MJBL','2021.08.23 10.18.39',NULL,'user01','newMechantId',51.6868648359957,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-V6L8-B94H-92AF-MHJT','2021.08.23 10.18.39',NULL,'user01','newMechantId',888.066577672989,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-1V8V-ERIU-PCFM-M7B0','2021.08.23 10.18.39',NULL,'user01','newMechantId',246.871604699116,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-QIKP-00WL-KX5U-FX8T','2021.08.23 10.18.39',NULL,'user01','newMechantId',605.676631725243,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-2MW0-LQGE-X1S8-3S5C','2021.08.23 10.18.39',NULL,'user01','newMechantId',800.861371588363,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-0JYD-742B-9WKQ-VYO2','2021.08.23 10.18.39',NULL,'user01','newMechantId',159.66639861449,'Payment','CardPayment')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-2G2L-BDUO-0U8V-87NE','2021.08.30 14.44.08',NULL,'user01','newMechantId',790.325502301718,'Payment','SberbankOnline')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-09DN-LE55-8NYA-B4OX','2021.08.30 14.44.08',NULL,'user01','newMechantId',149.130529327844,'Payment','CardPayment')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-ZDAC-DG8Y-JKNL-MUB2','2021.08.30 14.44.08',NULL,'user01','newMechantId',344.315269190965,'Payment','PaymentSystem')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-2MMS-CFSX-K6MY-OUN5','2021.08.30 14.44.08',NULL,'user01','newMechantId',703.120296217091,'Payment','SberbankOnline')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-GL54-7LAU-BPEB-1UTO','2021.08.30 14.44.08',NULL,'user01','newMechantId',539.500009054085,'Payment','SberbankOnline')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-L6HY-R5VT-VM1H-3JJY','2021.08.30 14.44.08',NULL,'user01','newMechantId',257.110063106339,'Payment','PaymentSystem')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-6RFA-YG5R-M2QW-BR60','2021.08.30 14.44.08',NULL,'user01','newMechantId',93.4897759433322,'Payment','CardPayment')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-M8MS-MZOK-0MJU-T301','2021.08.30 14.44.08',NULL,'user01','newMechantId',452.294802969459,'Payment','PaymentSystem')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-GPEJ-PSZE-A0MY-P8SE','2021.08.30 14.44.08',NULL,'user01','newMechantId',647.479542832579,'Payment','SberbankOnline')
+DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-QB45-60LG-D5KM-7K7T','2021.08.30 14.44.08',NULL,'user01','newMechantId',6.28456985870589,'Payment','CardPayment')
 DB_Executing query=Select * from Merchants 
 DB_Result is: hasRows=True
-_Merchant-7TIW-Z8PH-5FL5-NG21 ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-M1C0-HRMY-549B-7QSU ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
-_Merchant-RPC6-2M7Q-GT15-8NKP ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
-_Merchant-RR0D-N3K0-NIXQ-6HRB ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
-_Merchant-W0O5-QYOT-QLN8-462X ООО Вимос 2132188521  В этом магазине я покупал косилку
+_Merchant-2M8N-KBAA-LIKT-2MB0 ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
+_Merchant-570B-EY2X-R4L2-V3OO ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
+_Merchant-HSOS-AE4D-CSQG-W61M ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
+_Merchant-OKZU-T3T0-8F0S-02MG ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
+_Merchant-R7FS-WQGO-8XT4-OLMJ ООО Вимос 2132188521  В этом магазине я покупал косилку
 DB_Executing query=Select * from Contracts 
 DB_Result is: hasRows=True
-_Contract-1A1Z-OUWX-P71C-ED58 Merchant-RPC6-2M7Q-GT15-8NKP Contract-D0SE 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-8H3G-3WV2-ATQR-88WK Merchant-7TIW-Z8PH-5FL5-NG21 Contract-M8US 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-CP6V-89HF-I3WC-LH5X Merchant-RR0D-N3K0-NIXQ-6HRB Contract-XXC9 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-OXKK-PFJS-D4ZU-0CYD Merchant-W0O5-QYOT-QLN8-462X Contract-8UQV 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-UNAW-CW4Z-N1R4-FKGV Merchant-M1C0-HRMY-549B-7QSU Contract-1DTA 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-14YE-5LF9-ZGRD-SGS3 Merchant-R7FS-WQGO-8XT4-OLMJ Contract-HENO 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-1LB3-X4TO-1LCQ-F7JG Merchant-2M8N-KBAA-LIKT-2MB0 Contract-GJLY 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-6YQ2-34ZV-AI95-HAJ1 Merchant-570B-EY2X-R4L2-V3OO Contract-4P2R 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-O57Z-4G58-PJVV-2MD8 Merchant-OKZU-T3T0-8F0S-02MG Contract-26GP 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-SPDC-KTWM-0675-X1UU Merchant-HSOS-AE4D-CSQG-W61M Contract-RCVL 01.01.0001 0:00:00 01.01.0001 0:00:00
 DB_Executing query=Select * from Transactions 
 DB_Result is: hasRows=True
-DB_EXECUTING QUERY: drop table Merchants
-DB_RESULT IS: 0
-DB_EXECUTING QUERY: CREATE TABLE Merchants (id  VARCHAR(50) NOT NULL UNIQUE)
-DB_RESULT IS : 0
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN createdDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN lastModifiedDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN createdByUserId  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN FullName  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN INN  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN description  TEXT NULL 
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-LTNM-L3XX-TEJY-ZK6W','2021.08.23 13.04.03',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-I63E-AP2E-ESNE-27WV','2021.08.23 13.04.03',NULL,'user01','ООО Магазин Пятерочка','4543186966514','Это наша Пятерка')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-MZUY-615G-H715-G2ME','2021.08.23 13.04.03',NULL,'user01','ООО Леруа Мерлен СПб','890328903248','Это Леруа, в который мы все время ездим')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-S519-84J5-1II2-PS5V','2021.08.23 13.04.03',NULL,'user01','ООО Бутик Картин СПб','55908098908','Это люди, которые продают картины через интернет')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-RXMA-0H0Q-BW7C-X78M','2021.08.23 13.04.03',NULL,'user01','ООО Вимос','2132188521','В этом магазине я покупал косилку')
-DB_EXECUTING QUERY: drop table Contracts
-DB_RESULT IS: 0
-DB_EXECUTING QUERY: CREATE TABLE Contracts (id  VARCHAR(50) NOT NULL UNIQUE)
-DB_RESULT IS : 0
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN createdDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN lastModifiedDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN createdByUserId  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN merchantId  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractNumber  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractSignDate  DATETIME NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractExiryDate  DATETIME NULL 
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-CFNS-PLOL-FK8L-6GI4','2021.08.23 13.04.04',NULL,'user01','Merchant-LTNM-L3XX-TEJY-ZK6W','Contract-GJV6','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-4JAR-TP65-5K15-YLVJ','2021.08.23 13.04.04',NULL,'user01','Merchant-I63E-AP2E-ESNE-27WV','Contract-J5WF','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-NAQX-G0K4-80JW-HTFZ','2021.08.23 13.04.04',NULL,'user01','Merchant-MZUY-615G-H715-G2ME','Contract-QCOX','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-JXSY-47DZ-2UYZ-MF7G','2021.08.23 13.04.05',NULL,'user01','Merchant-S519-84J5-1II2-PS5V','Contract-JKVH','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-W0MT-BQ4L-H5PC-U26L','2021.08.23 13.04.05',NULL,'user01','Merchant-RXMA-0H0Q-BW7C-X78M','Contract-O2MP','2021.08.23','2021.08.23')
-DB_EXECUTING QUERY: drop table Transactions
-DB_RESULT IS: 0
-DB_EXECUTING QUERY: CREATE TABLE Transactions (id  VARCHAR(50) NOT NULL UNIQUE)
-DB_RESULT IS : 0
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN createdDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN lastModifiedDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN createdByUserId  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN mechantId  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN amount  DOUBLE NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN operationTypeId  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN paymentMethodId  TEXT NOT NULL 
-DB_ERROR: Ссылка на объект не указывает на экземпляр объекта.
-DB_ERROR: Ссылка на объект не указывает на экземпляр объекта.
-DB_ERROR: Ссылка на объект не указывает на экземпляр объекта.
-DB_ERROR: Ссылка на объект не указывает на экземпляр объекта.
-DB_ERROR: Ссылка на объект не указывает на экземпляр объекта.
-DB_ERROR: Ссылка на объект не указывает на экземпляр объекта.
-DB_ERROR: Ссылка на объект не указывает на экземпляр объекта.
-DB_ERROR: Ссылка на объект не указывает на экземпляр объекта.
-DB_ERROR: Ссылка на объект не указывает на экземпляр объекта.
-DB_ERROR: Ссылка на объект не указывает на экземпляр объекта.
+_Transaction-09DN-LE55-8NYA-B4OX  149,130529327844 Payment CardPayment
+_Transaction-2G2L-BDUO-0U8V-87NE  790,325502301718 Payment SberbankOnline
+_Transaction-2MMS-CFSX-K6MY-OUN5  703,120296217091 Payment SberbankOnline
+_Transaction-6RFA-YG5R-M2QW-BR60  93,4897759433322 Payment CardPayment
+_Transaction-GL54-7LAU-BPEB-1UTO  539,500009054085 Payment SberbankOnline
+_Transaction-GPEJ-PSZE-A0MY-P8SE  647,479542832579 Payment SberbankOnline
+_Transaction-L6HY-R5VT-VM1H-3JJY  257,110063106339 Payment PaymentSystem
+_Transaction-M8MS-MZOK-0MJU-T301  452,294802969459 Payment PaymentSystem
+_Transaction-QB45-60LG-D5KM-7K7T  6,28456985870589 Payment CardPayment
+_Transaction-ZDAC-DG8Y-JKNL-MUB2  344,315269190965 Payment PaymentSystem
 DB_Executing query=Select * from Merchants 
 DB_Result is: hasRows=True
-_Merchant-I63E-AP2E-ESNE-27WV ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
-_Merchant-LTNM-L3XX-TEJY-ZK6W ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-MZUY-615G-H715-G2ME ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
-_Merchant-RXMA-0H0Q-BW7C-X78M ООО Вимос 2132188521  В этом магазине я покупал косилку
-_Merchant-S519-84J5-1II2-PS5V ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
+_Merchant-2M8N-KBAA-LIKT-2MB0 ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
+_Merchant-570B-EY2X-R4L2-V3OO ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
+_Merchant-HSOS-AE4D-CSQG-W61M ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
+_Merchant-OKZU-T3T0-8F0S-02MG ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
+_Merchant-R7FS-WQGO-8XT4-OLMJ ООО Вимос 2132188521  В этом магазине я покупал косилку
 DB_Executing query=Select * from Contracts 
 DB_Result is: hasRows=True
-_Contract-4JAR-TP65-5K15-YLVJ Merchant-I63E-AP2E-ESNE-27WV Contract-J5WF 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-CFNS-PLOL-FK8L-6GI4 Merchant-LTNM-L3XX-TEJY-ZK6W Contract-GJV6 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-JXSY-47DZ-2UYZ-MF7G Merchant-S519-84J5-1II2-PS5V Contract-JKVH 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-NAQX-G0K4-80JW-HTFZ Merchant-MZUY-615G-H715-G2ME Contract-QCOX 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-W0MT-BQ4L-H5PC-U26L Merchant-RXMA-0H0Q-BW7C-X78M Contract-O2MP 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-14YE-5LF9-ZGRD-SGS3 Merchant-R7FS-WQGO-8XT4-OLMJ Contract-HENO 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-1LB3-X4TO-1LCQ-F7JG Merchant-2M8N-KBAA-LIKT-2MB0 Contract-GJLY 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-6YQ2-34ZV-AI95-HAJ1 Merchant-570B-EY2X-R4L2-V3OO Contract-4P2R 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-O57Z-4G58-PJVV-2MD8 Merchant-OKZU-T3T0-8F0S-02MG Contract-26GP 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-SPDC-KTWM-0675-X1UU Merchant-HSOS-AE4D-CSQG-W61M Contract-RCVL 01.01.0001 0:00:00 01.01.0001 0:00:00
 DB_Executing query=Select * from Transactions 
-DB_Result is: hasRows=False
-DB_EXECUTING QUERY: drop table Merchants
-DB_RESULT IS: 0
-DB_EXECUTING QUERY: CREATE TABLE Merchants (id  VARCHAR(50) NOT NULL UNIQUE)
-DB_RESULT IS : 0
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN createdDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN lastModifiedDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN createdByUserId  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN FullName  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN INN  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN description  TEXT NULL 
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-DYT4-42EL-3BW5-HD1W','2021.08.23 13.05.48',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-VX2L-W3IM-YM90-87NN','2021.08.23 13.05.48',NULL,'user01','ООО Магазин Пятерочка','4543186966514','Это наша Пятерка')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-ZE2L-0J0V-070G-5F60','2021.08.23 13.05.48',NULL,'user01','ООО Леруа Мерлен СПб','890328903248','Это Леруа, в который мы все время ездим')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-1OO5-4MYK-PHGR-2NM5','2021.08.23 13.05.48',NULL,'user01','ООО Бутик Картин СПб','55908098908','Это люди, которые продают картины через интернет')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-XJGC-LP5L-6GUZ-DCRT','2021.08.23 13.05.48',NULL,'user01','ООО Вимос','2132188521','В этом магазине я покупал косилку')
-DB_EXECUTING QUERY: drop table Contracts
-DB_RESULT IS: 0
-DB_EXECUTING QUERY: CREATE TABLE Contracts (id  VARCHAR(50) NOT NULL UNIQUE)
-DB_RESULT IS : 0
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN createdDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN lastModifiedDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN createdByUserId  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN merchantId  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractNumber  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractSignDate  DATETIME NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractExiryDate  DATETIME NULL 
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-U4SV-94PL-TC8Y-19HN','2021.08.23 13.05.49',NULL,'user01','Merchant-DYT4-42EL-3BW5-HD1W','Contract-QJ9T','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-NIFI-U5UV-3XAQ-T4WQ','2021.08.23 13.05.49',NULL,'user01','Merchant-VX2L-W3IM-YM90-87NN','Contract-0XBT','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-4KLT-4824-CPZ1-25W6','2021.08.23 13.05.49',NULL,'user01','Merchant-ZE2L-0J0V-070G-5F60','Contract-KS3Q','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-52WJ-SDWL-Z8N2-TGAX','2021.08.23 13.05.49',NULL,'user01','Merchant-1OO5-4MYK-PHGR-2NM5','Contract-GFSA','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-CS59-IMOD-SGKT-OYTD','2021.08.23 13.05.49',NULL,'user01','Merchant-XJGC-LP5L-6GUZ-DCRT','Contract-08AD','2021.08.23','2021.08.23')
-DB_EXECUTING QUERY: drop table Transactions
-DB_RESULT IS: 0
-DB_EXECUTING QUERY: CREATE TABLE Transactions (id  VARCHAR(50) NOT NULL UNIQUE)
-DB_RESULT IS : 0
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN createdDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN lastModifiedDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN createdByUserId  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN mechantId  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN amount  DOUBLE NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN operationTypeId  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN paymentMethodId  TEXT NOT NULL 
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-MCRC-NJDE-DUPK-4FCE','2021.08.23 13.05.50',NULL,'user01','newMechantId',75.1537834644103,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-EXZB-LAOO-T7V7-QFXF','2021.08.23 13.05.50',NULL,'user01','newMechantId',911.533496301404,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-YFEG-D1M2-P15Y-6DIM','2021.08.23 13.05.50',NULL,'user01','newMechantId',629.143550353657,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-EGP0-8S2M-YDSQ-YGX8','2021.08.23 13.05.50',NULL,'user01','newMechantId',465.523263190651,'Payment','PaymentSystem')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-6KWY-B6AM-L6VT-EZRQ','2021.08.23 13.05.50',NULL,'user01','newMechantId',183.133317242904,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-YI2K-Z6GF-N1RA-J6EJ','2021.08.23 13.05.50',NULL,'user01','newMechantId',19.513030079898,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-D72W-QTKH-FCPC-6IH9','2021.08.23 13.05.50',NULL,'user01','newMechantId',214.697769943018,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-VB1Q-NNI9-DQLJ-OADP','2021.08.23 13.05.50',NULL,'user01','newMechantId',573.502796969145,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-2MPH-75AE-7UEW-REJE','2021.08.23 13.05.50',NULL,'user01','newMechantId',768.687536832265,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-USOH-EY50-Y2S9-IB3F','2021.08.23 13.05.50',NULL,'user01','newMechantId',127.492563858392,'Payment','CardPayment')
+DB_Result is: hasRows=True
+_Transaction-09DN-LE55-8NYA-B4OX  149,130529327844 Payment CardPayment
+_Transaction-2G2L-BDUO-0U8V-87NE  790,325502301718 Payment SberbankOnline
+_Transaction-2MMS-CFSX-K6MY-OUN5  703,120296217091 Payment SberbankOnline
+_Transaction-6RFA-YG5R-M2QW-BR60  93,4897759433322 Payment CardPayment
+_Transaction-GL54-7LAU-BPEB-1UTO  539,500009054085 Payment SberbankOnline
+_Transaction-GPEJ-PSZE-A0MY-P8SE  647,479542832579 Payment SberbankOnline
+_Transaction-L6HY-R5VT-VM1H-3JJY  257,110063106339 Payment PaymentSystem
+_Transaction-M8MS-MZOK-0MJU-T301  452,294802969459 Payment PaymentSystem
+_Transaction-QB45-60LG-D5KM-7K7T  6,28456985870589 Payment CardPayment
+_Transaction-ZDAC-DG8Y-JKNL-MUB2  344,315269190965 Payment PaymentSystem
 DB_Executing query=Select * from Merchants 
 DB_Result is: hasRows=True
-_Merchant-1OO5-4MYK-PHGR-2NM5 ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
-_Merchant-DYT4-42EL-3BW5-HD1W ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-VX2L-W3IM-YM90-87NN ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
-_Merchant-XJGC-LP5L-6GUZ-DCRT ООО Вимос 2132188521  В этом магазине я покупал косилку
-_Merchant-ZE2L-0J0V-070G-5F60 ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
+_Merchant-2M8N-KBAA-LIKT-2MB0 ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
+_Merchant-570B-EY2X-R4L2-V3OO ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
+_Merchant-HSOS-AE4D-CSQG-W61M ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
+_Merchant-OKZU-T3T0-8F0S-02MG ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
+_Merchant-R7FS-WQGO-8XT4-OLMJ ООО Вимос 2132188521  В этом магазине я покупал косилку
 DB_Executing query=Select * from Contracts 
 DB_Result is: hasRows=True
-_Contract-4KLT-4824-CPZ1-25W6 Merchant-ZE2L-0J0V-070G-5F60 Contract-KS3Q 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-52WJ-SDWL-Z8N2-TGAX Merchant-1OO5-4MYK-PHGR-2NM5 Contract-GFSA 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-CS59-IMOD-SGKT-OYTD Merchant-XJGC-LP5L-6GUZ-DCRT Contract-08AD 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-NIFI-U5UV-3XAQ-T4WQ Merchant-VX2L-W3IM-YM90-87NN Contract-0XBT 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-U4SV-94PL-TC8Y-19HN Merchant-DYT4-42EL-3BW5-HD1W Contract-QJ9T 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-14YE-5LF9-ZGRD-SGS3 Merchant-R7FS-WQGO-8XT4-OLMJ Contract-HENO 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-1LB3-X4TO-1LCQ-F7JG Merchant-2M8N-KBAA-LIKT-2MB0 Contract-GJLY 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-6YQ2-34ZV-AI95-HAJ1 Merchant-570B-EY2X-R4L2-V3OO Contract-4P2R 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-O57Z-4G58-PJVV-2MD8 Merchant-OKZU-T3T0-8F0S-02MG Contract-26GP 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-SPDC-KTWM-0675-X1UU Merchant-HSOS-AE4D-CSQG-W61M Contract-RCVL 01.01.0001 0:00:00 01.01.0001 0:00:00
 DB_Executing query=Select * from Transactions 
 DB_Result is: hasRows=True
-_Transaction-2MPH-75AE-7UEW-REJE  768,687536832265 Payment SberbankOnline
-_Transaction-6KWY-B6AM-L6VT-EZRQ  183,133317242904 Payment CardPayment
-_Transaction-D72W-QTKH-FCPC-6IH9  214,697769943018 Payment CardPayment
-_Transaction-EGP0-8S2M-YDSQ-YGX8  465,523263190651 Payment PaymentSystem
-_Transaction-EXZB-LAOO-T7V7-QFXF  911,533496301404 Payment SberbankOnline
-_Transaction-MCRC-NJDE-DUPK-4FCE  75,1537834644103 Payment CardPayment
-_Transaction-USOH-EY50-Y2S9-IB3F  127,492563858392 Payment CardPayment
-_Transaction-VB1Q-NNI9-DQLJ-OADP  573,502796969145 Payment SberbankOnline
-_Transaction-YFEG-D1M2-P15Y-6DIM  629,143550353657 Payment SberbankOnline
-_Transaction-YI2K-Z6GF-N1RA-J6EJ  19,513030079898 Payment CardPayment
+_Transaction-09DN-LE55-8NYA-B4OX  149,130529327844 Payment CardPayment
+_Transaction-2G2L-BDUO-0U8V-87NE  790,325502301718 Payment SberbankOnline
+_Transaction-2MMS-CFSX-K6MY-OUN5  703,120296217091 Payment SberbankOnline
+_Transaction-6RFA-YG5R-M2QW-BR60  93,4897759433322 Payment CardPayment
+_Transaction-GL54-7LAU-BPEB-1UTO  539,500009054085 Payment SberbankOnline
+_Transaction-GPEJ-PSZE-A0MY-P8SE  647,479542832579 Payment SberbankOnline
+_Transaction-L6HY-R5VT-VM1H-3JJY  257,110063106339 Payment PaymentSystem
+_Transaction-M8MS-MZOK-0MJU-T301  452,294802969459 Payment PaymentSystem
+_Transaction-QB45-60LG-D5KM-7K7T  6,28456985870589 Payment CardPayment
+_Transaction-ZDAC-DG8Y-JKNL-MUB2  344,315269190965 Payment PaymentSystem
 DB_Executing query=Select * from Merchants 
 DB_Result is: hasRows=True
-_Merchant-1OO5-4MYK-PHGR-2NM5 ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
-_Merchant-DYT4-42EL-3BW5-HD1W ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-VX2L-W3IM-YM90-87NN ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
-_Merchant-XJGC-LP5L-6GUZ-DCRT ООО Вимос 2132188521  В этом магазине я покупал косилку
-_Merchant-ZE2L-0J0V-070G-5F60 ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
+_Merchant-2M8N-KBAA-LIKT-2MB0 ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
+_Merchant-570B-EY2X-R4L2-V3OO ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
+_Merchant-HSOS-AE4D-CSQG-W61M ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
+_Merchant-OKZU-T3T0-8F0S-02MG ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
+_Merchant-R7FS-WQGO-8XT4-OLMJ ООО Вимос 2132188521  В этом магазине я покупал косилку
 DB_Executing query=Select * from Contracts 
 DB_Result is: hasRows=True
-_Contract-4KLT-4824-CPZ1-25W6 Merchant-ZE2L-0J0V-070G-5F60 Contract-KS3Q 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-52WJ-SDWL-Z8N2-TGAX Merchant-1OO5-4MYK-PHGR-2NM5 Contract-GFSA 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-CS59-IMOD-SGKT-OYTD Merchant-XJGC-LP5L-6GUZ-DCRT Contract-08AD 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-NIFI-U5UV-3XAQ-T4WQ Merchant-VX2L-W3IM-YM90-87NN Contract-0XBT 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-U4SV-94PL-TC8Y-19HN Merchant-DYT4-42EL-3BW5-HD1W Contract-QJ9T 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-14YE-5LF9-ZGRD-SGS3 Merchant-R7FS-WQGO-8XT4-OLMJ Contract-HENO 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-1LB3-X4TO-1LCQ-F7JG Merchant-2M8N-KBAA-LIKT-2MB0 Contract-GJLY 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-6YQ2-34ZV-AI95-HAJ1 Merchant-570B-EY2X-R4L2-V3OO Contract-4P2R 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-O57Z-4G58-PJVV-2MD8 Merchant-OKZU-T3T0-8F0S-02MG Contract-26GP 01.01.0001 0:00:00 01.01.0001 0:00:00
+_Contract-SPDC-KTWM-0675-X1UU Merchant-HSOS-AE4D-CSQG-W61M Contract-RCVL 01.01.0001 0:00:00 01.01.0001 0:00:00
 DB_Executing query=Select * from Transactions 
 DB_Result is: hasRows=True
-_Transaction-2MPH-75AE-7UEW-REJE  768,687536832265 Payment SberbankOnline
-_Transaction-6KWY-B6AM-L6VT-EZRQ  183,133317242904 Payment CardPayment
-_Transaction-D72W-QTKH-FCPC-6IH9  214,697769943018 Payment CardPayment
-_Transaction-EGP0-8S2M-YDSQ-YGX8  465,523263190651 Payment PaymentSystem
-_Transaction-EXZB-LAOO-T7V7-QFXF  911,533496301404 Payment SberbankOnline
-_Transaction-MCRC-NJDE-DUPK-4FCE  75,1537834644103 Payment CardPayment
-_Transaction-USOH-EY50-Y2S9-IB3F  127,492563858392 Payment CardPayment
-_Transaction-VB1Q-NNI9-DQLJ-OADP  573,502796969145 Payment SberbankOnline
-_Transaction-YFEG-D1M2-P15Y-6DIM  629,143550353657 Payment SberbankOnline
-_Transaction-YI2K-Z6GF-N1RA-J6EJ  19,513030079898 Payment CardPayment
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-9DC6-0RQQ-I6K6-9U8T','2021.08.23 18.39.39',NULL,'user01','newMechantId',978.739845556551,'Payment','SberbankOnline')
-DB_Executing query=Select * from Merchants 
-DB_Result is: hasRows=True
-_Merchant-1OO5-4MYK-PHGR-2NM5 ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
-_Merchant-DYT4-42EL-3BW5-HD1W ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-VX2L-W3IM-YM90-87NN ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
-_Merchant-XJGC-LP5L-6GUZ-DCRT ООО Вимос 2132188521  В этом магазине я покупал косилку
-_Merchant-ZE2L-0J0V-070G-5F60 ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
-DB_Executing query=Select * from Contracts 
-DB_Result is: hasRows=True
-_Contract-4KLT-4824-CPZ1-25W6 Merchant-ZE2L-0J0V-070G-5F60 Contract-KS3Q 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-52WJ-SDWL-Z8N2-TGAX Merchant-1OO5-4MYK-PHGR-2NM5 Contract-GFSA 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-CS59-IMOD-SGKT-OYTD Merchant-XJGC-LP5L-6GUZ-DCRT Contract-08AD 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-NIFI-U5UV-3XAQ-T4WQ Merchant-VX2L-W3IM-YM90-87NN Contract-0XBT 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-U4SV-94PL-TC8Y-19HN Merchant-DYT4-42EL-3BW5-HD1W Contract-QJ9T 01.01.0001 0:00:00 01.01.0001 0:00:00
-DB_Executing query=Select * from Transactions 
-DB_Result is: hasRows=True
-_Transaction-2MPH-75AE-7UEW-REJE  768,687536832265 Payment SberbankOnline
-_Transaction-6KWY-B6AM-L6VT-EZRQ  183,133317242904 Payment CardPayment
-_Transaction-9DC6-0RQQ-I6K6-9U8T  978,739845556551 Payment SberbankOnline
-_Transaction-D72W-QTKH-FCPC-6IH9  214,697769943018 Payment CardPayment
-_Transaction-EGP0-8S2M-YDSQ-YGX8  465,523263190651 Payment PaymentSystem
-_Transaction-EXZB-LAOO-T7V7-QFXF  911,533496301404 Payment SberbankOnline
-_Transaction-MCRC-NJDE-DUPK-4FCE  75,1537834644103 Payment CardPayment
-_Transaction-USOH-EY50-Y2S9-IB3F  127,492563858392 Payment CardPayment
-_Transaction-VB1Q-NNI9-DQLJ-OADP  573,502796969145 Payment SberbankOnline
-_Transaction-YFEG-D1M2-P15Y-6DIM  629,143550353657 Payment SberbankOnline
-_Transaction-YI2K-Z6GF-N1RA-J6EJ  19,513030079898 Payment CardPayment
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-7T65-89JR-06MJ-5IAI','2021.08.23 18.40.28',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
-DB_Executing query=Select * from Merchants 
-DB_Result is: hasRows=True
-_Merchant-1OO5-4MYK-PHGR-2NM5 ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
-_Merchant-7T65-89JR-06MJ-5IAI ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-DYT4-42EL-3BW5-HD1W ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-VX2L-W3IM-YM90-87NN ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
-_Merchant-XJGC-LP5L-6GUZ-DCRT ООО Вимос 2132188521  В этом магазине я покупал косилку
-_Merchant-ZE2L-0J0V-070G-5F60 ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
-DB_Executing query=Select * from Contracts 
-DB_Result is: hasRows=True
-_Contract-4KLT-4824-CPZ1-25W6 Merchant-ZE2L-0J0V-070G-5F60 Contract-KS3Q 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-52WJ-SDWL-Z8N2-TGAX Merchant-1OO5-4MYK-PHGR-2NM5 Contract-GFSA 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-CS59-IMOD-SGKT-OYTD Merchant-XJGC-LP5L-6GUZ-DCRT Contract-08AD 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-NIFI-U5UV-3XAQ-T4WQ Merchant-VX2L-W3IM-YM90-87NN Contract-0XBT 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-U4SV-94PL-TC8Y-19HN Merchant-DYT4-42EL-3BW5-HD1W Contract-QJ9T 01.01.0001 0:00:00 01.01.0001 0:00:00
-DB_Executing query=Select * from Transactions 
-DB_Result is: hasRows=True
-_Transaction-2MPH-75AE-7UEW-REJE  768,687536832265 Payment SberbankOnline
-_Transaction-6KWY-B6AM-L6VT-EZRQ  183,133317242904 Payment CardPayment
-_Transaction-9DC6-0RQQ-I6K6-9U8T  978,739845556551 Payment SberbankOnline
-_Transaction-D72W-QTKH-FCPC-6IH9  214,697769943018 Payment CardPayment
-_Transaction-EGP0-8S2M-YDSQ-YGX8  465,523263190651 Payment PaymentSystem
-_Transaction-EXZB-LAOO-T7V7-QFXF  911,533496301404 Payment SberbankOnline
-_Transaction-MCRC-NJDE-DUPK-4FCE  75,1537834644103 Payment CardPayment
-_Transaction-USOH-EY50-Y2S9-IB3F  127,492563858392 Payment CardPayment
-_Transaction-VB1Q-NNI9-DQLJ-OADP  573,502796969145 Payment SberbankOnline
-_Transaction-YFEG-D1M2-P15Y-6DIM  629,143550353657 Payment SberbankOnline
-_Transaction-YI2K-Z6GF-N1RA-J6EJ  19,513030079898 Payment CardPayment
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-U5TF-NAGQ-14CZ-C52M','2021.08.23 18.40.45',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
-DB_Executing query=Select * from Merchants 
-DB_Result is: hasRows=True
-_Merchant-1OO5-4MYK-PHGR-2NM5 ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
-_Merchant-7T65-89JR-06MJ-5IAI ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-DYT4-42EL-3BW5-HD1W ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-U5TF-NAGQ-14CZ-C52M ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-VX2L-W3IM-YM90-87NN ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
-_Merchant-XJGC-LP5L-6GUZ-DCRT ООО Вимос 2132188521  В этом магазине я покупал косилку
-_Merchant-ZE2L-0J0V-070G-5F60 ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
-DB_Executing query=Select * from Contracts 
-DB_Result is: hasRows=True
-_Contract-4KLT-4824-CPZ1-25W6 Merchant-ZE2L-0J0V-070G-5F60 Contract-KS3Q 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-52WJ-SDWL-Z8N2-TGAX Merchant-1OO5-4MYK-PHGR-2NM5 Contract-GFSA 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-CS59-IMOD-SGKT-OYTD Merchant-XJGC-LP5L-6GUZ-DCRT Contract-08AD 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-NIFI-U5UV-3XAQ-T4WQ Merchant-VX2L-W3IM-YM90-87NN Contract-0XBT 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-U4SV-94PL-TC8Y-19HN Merchant-DYT4-42EL-3BW5-HD1W Contract-QJ9T 01.01.0001 0:00:00 01.01.0001 0:00:00
-DB_Executing query=Select * from Transactions 
-DB_Result is: hasRows=True
-_Transaction-2MPH-75AE-7UEW-REJE  768,687536832265 Payment SberbankOnline
-_Transaction-6KWY-B6AM-L6VT-EZRQ  183,133317242904 Payment CardPayment
-_Transaction-9DC6-0RQQ-I6K6-9U8T  978,739845556551 Payment SberbankOnline
-_Transaction-D72W-QTKH-FCPC-6IH9  214,697769943018 Payment CardPayment
-_Transaction-EGP0-8S2M-YDSQ-YGX8  465,523263190651 Payment PaymentSystem
-_Transaction-EXZB-LAOO-T7V7-QFXF  911,533496301404 Payment SberbankOnline
-_Transaction-MCRC-NJDE-DUPK-4FCE  75,1537834644103 Payment CardPayment
-_Transaction-USOH-EY50-Y2S9-IB3F  127,492563858392 Payment CardPayment
-_Transaction-VB1Q-NNI9-DQLJ-OADP  573,502796969145 Payment SberbankOnline
-_Transaction-YFEG-D1M2-P15Y-6DIM  629,143550353657 Payment SberbankOnline
-_Transaction-YI2K-Z6GF-N1RA-J6EJ  19,513030079898 Payment CardPayment
-DB_EXECUTING QUERY: drop table Merchants
-DB_RESULT IS: 0
-DB_EXECUTING QUERY: CREATE TABLE Merchants (id  VARCHAR(50) NOT NULL UNIQUE)
-DB_RESULT IS : 0
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN createdDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN lastModifiedDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN createdByUserId  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN FullName  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN INN  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Merchants ADD COLUMN description  TEXT NULL 
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-1QN8-PSP9-3UG4-FHVA','2021.08.23 18.40.55',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-5BLE-A2F7-MQEE-7UP5','2021.08.23 18.40.55',NULL,'user01','ООО Магазин Пятерочка','4543186966514','Это наша Пятерка')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-EASO-5C2C-PUL3-3MKU','2021.08.23 18.40.55',NULL,'user01','ООО Леруа Мерлен СПб','890328903248','Это Леруа, в который мы все время ездим')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-JC3A-TXL8-LPW8-NLCJ','2021.08.23 18.40.55',NULL,'user01','ООО Бутик Картин СПб','55908098908','Это люди, которые продают картины через интернет')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-ELZF-YGE3-IJZQ-RMD9','2021.08.23 18.40.55',NULL,'user01','ООО Вимос','2132188521','В этом магазине я покупал косилку')
-DB_EXECUTING QUERY: drop table Contracts
-DB_RESULT IS: 0
-DB_EXECUTING QUERY: CREATE TABLE Contracts (id  VARCHAR(50) NOT NULL UNIQUE)
-DB_RESULT IS : 0
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN createdDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN lastModifiedDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN createdByUserId  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN merchantId  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractNumber  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractSignDate  DATETIME NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Contracts ADD COLUMN contractExiryDate  DATETIME NULL 
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-RCYS-XF5C-7A1K-84R9','2021.08.23 18.40.56',NULL,'user01','Merchant-1QN8-PSP9-3UG4-FHVA','Contract-GT44','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-VU9O-XUMA-Y27Z-YBS3','2021.08.23 18.40.56',NULL,'user01','Merchant-5BLE-A2F7-MQEE-7UP5','Contract-LX24','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-XMYN-5CL1-K2GY-K3B8','2021.08.23 18.40.56',NULL,'user01','Merchant-EASO-5C2C-PUL3-3MKU','Contract-CDE2','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-3ZCL-MF89-2MRJ-X980','2021.08.23 18.40.56',NULL,'user01','Merchant-JC3A-TXL8-LPW8-NLCJ','Contract-ZWC9','2021.08.23','2021.08.23')
-DB_Executing query: insert into Contracts (id,createdDateTime,lastModifiedDateTime,createdByUserId,merchantId,contractNumber,contractSignDate,contractExiryDate)  values ('Contract-QI5U-0ZWU-YCHH-CDD7','2021.08.23 18.40.56',NULL,'user01','Merchant-ELZF-YGE3-IJZQ-RMD9','Contract-8UZC','2021.08.23','2021.08.23')
-DB_EXECUTING QUERY: drop table Transactions
-DB_RESULT IS: 0
-DB_EXECUTING QUERY: CREATE TABLE Transactions (id  VARCHAR(50) NOT NULL UNIQUE)
-DB_RESULT IS : 0
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN createdDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN lastModifiedDateTime  DATETIME NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN createdByUserId  TEXT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN mechantId  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN amount  DOUBLE NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN operationTypeId  TEXT NOT NULL 
-DB_EXECUTING QUERY: ALTER TABLE Transactions ADD COLUMN paymentMethodId  TEXT NOT NULL 
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-1F0R-IJJ4-CAMO-Y33F','2021.08.23 18.40.57',NULL,'user01','newMechantId',721.406746525972,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-XE2P-EO9I-7FNU-1P95','2021.08.23 18.40.57',NULL,'user01','newMechantId',916.591486389093,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-3TNA-6HFH-8BSZ-MH55','2021.08.23 18.40.58',NULL,'user01','newMechantId',275.396513415219,'Payment','PaymentSystem')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-JCU8-KY3N-GRTD-5ZCW','2021.08.23 18.40.58',NULL,'user01','newMechantId',634.201540441346,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-AQVF-P2IP-9VQD-5K60','2021.08.23 18.40.58',NULL,'user01','newMechantId',829.386280304466,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-JSLZ-4BUF-0A4P-YCMJ','2021.08.23 18.40.58',NULL,'user01','newMechantId',188.191307330593,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-85Y5-W0PR-3E9Z-H0R5','2021.08.23 18.40.58',NULL,'user01','newMechantId',24.5710201675869,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-V33M-OM19-6PPP-7217','2021.08.23 18.40.58',NULL,'user01','newMechantId',219.755760030707,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-IHE9-VAET-C360-B479','2021.08.23 18.40.58',NULL,'user01','newMechantId',578.560787056834,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-S844-I95W-DY9G-LATA','2021.08.23 18.40.58',NULL,'user01','newMechantId',937.36581408296,'Payment','SberbankOnline')
-DB_Executing query=Select * from Merchants 
-DB_Result is: hasRows=True
-_Merchant-1QN8-PSP9-3UG4-FHVA ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-5BLE-A2F7-MQEE-7UP5 ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
-_Merchant-EASO-5C2C-PUL3-3MKU ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
-_Merchant-ELZF-YGE3-IJZQ-RMD9 ООО Вимос 2132188521  В этом магазине я покупал косилку
-_Merchant-JC3A-TXL8-LPW8-NLCJ ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
-DB_Executing query=Select * from Contracts 
-DB_Result is: hasRows=True
-_Contract-3ZCL-MF89-2MRJ-X980 Merchant-JC3A-TXL8-LPW8-NLCJ Contract-ZWC9 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-QI5U-0ZWU-YCHH-CDD7 Merchant-ELZF-YGE3-IJZQ-RMD9 Contract-8UZC 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-RCYS-XF5C-7A1K-84R9 Merchant-1QN8-PSP9-3UG4-FHVA Contract-GT44 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-VU9O-XUMA-Y27Z-YBS3 Merchant-5BLE-A2F7-MQEE-7UP5 Contract-LX24 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-XMYN-5CL1-K2GY-K3B8 Merchant-EASO-5C2C-PUL3-3MKU Contract-CDE2 01.01.0001 0:00:00 01.01.0001 0:00:00
-DB_Executing query=Select * from Transactions 
-DB_Result is: hasRows=True
-_Transaction-1F0R-IJJ4-CAMO-Y33F  721,406746525972 Payment SberbankOnline
-_Transaction-3TNA-6HFH-8BSZ-MH55  275,396513415219 Payment PaymentSystem
-_Transaction-85Y5-W0PR-3E9Z-H0R5  24,5710201675869 Payment CardPayment
-_Transaction-AQVF-P2IP-9VQD-5K60  829,386280304466 Payment SberbankOnline
-_Transaction-IHE9-VAET-C360-B479  578,560787056834 Payment SberbankOnline
-_Transaction-JCU8-KY3N-GRTD-5ZCW  634,201540441346 Payment SberbankOnline
-_Transaction-JSLZ-4BUF-0A4P-YCMJ  188,191307330593 Payment CardPayment
-_Transaction-S844-I95W-DY9G-LATA  937,36581408296 Payment SberbankOnline
-_Transaction-V33M-OM19-6PPP-7217  219,755760030707 Payment CardPayment
-_Transaction-XE2P-EO9I-7FNU-1P95  916,591486389093 Payment SberbankOnline
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-9IX4-8J7W-PKQ5-HXAW','2021.08.23 20.13.47',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-GDPO-A17E-DE7M-ZYYC','2021.08.23 20.13.48',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
-DB_Executing query: insert into Merchants (id,createdDateTime,lastModifiedDateTime,createdByUserId,FullName,INN,description)  values ('Merchant-ABWD-PN5B-IKN8-01V2','2021.08.23 20.13.50',NULL,'user01','ООО Рога и Копыта','12345678925888','Фирма создана Остапом Бендером')
-DB_Executing query=Select * from Merchants 
-DB_Result is: hasRows=True
-_Merchant-1QN8-PSP9-3UG4-FHVA ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-5BLE-A2F7-MQEE-7UP5 ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
-_Merchant-9IX4-8J7W-PKQ5-HXAW ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-ABWD-PN5B-IKN8-01V2 ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-EASO-5C2C-PUL3-3MKU ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
-_Merchant-ELZF-YGE3-IJZQ-RMD9 ООО Вимос 2132188521  В этом магазине я покупал косилку
-_Merchant-GDPO-A17E-DE7M-ZYYC ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-JC3A-TXL8-LPW8-NLCJ ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
-DB_Executing query=Select * from Contracts 
-DB_Result is: hasRows=True
-_Contract-3ZCL-MF89-2MRJ-X980 Merchant-JC3A-TXL8-LPW8-NLCJ Contract-ZWC9 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-QI5U-0ZWU-YCHH-CDD7 Merchant-ELZF-YGE3-IJZQ-RMD9 Contract-8UZC 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-RCYS-XF5C-7A1K-84R9 Merchant-1QN8-PSP9-3UG4-FHVA Contract-GT44 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-VU9O-XUMA-Y27Z-YBS3 Merchant-5BLE-A2F7-MQEE-7UP5 Contract-LX24 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-XMYN-5CL1-K2GY-K3B8 Merchant-EASO-5C2C-PUL3-3MKU Contract-CDE2 01.01.0001 0:00:00 01.01.0001 0:00:00
-DB_Executing query=Select * from Transactions 
-DB_Result is: hasRows=True
-_Transaction-1F0R-IJJ4-CAMO-Y33F  721,406746525972 Payment SberbankOnline
-_Transaction-3TNA-6HFH-8BSZ-MH55  275,396513415219 Payment PaymentSystem
-_Transaction-85Y5-W0PR-3E9Z-H0R5  24,5710201675869 Payment CardPayment
-_Transaction-AQVF-P2IP-9VQD-5K60  829,386280304466 Payment SberbankOnline
-_Transaction-IHE9-VAET-C360-B479  578,560787056834 Payment SberbankOnline
-_Transaction-JCU8-KY3N-GRTD-5ZCW  634,201540441346 Payment SberbankOnline
-_Transaction-JSLZ-4BUF-0A4P-YCMJ  188,191307330593 Payment CardPayment
-_Transaction-S844-I95W-DY9G-LATA  937,36581408296 Payment SberbankOnline
-_Transaction-V33M-OM19-6PPP-7217  219,755760030707 Payment CardPayment
-_Transaction-XE2P-EO9I-7FNU-1P95  916,591486389093 Payment SberbankOnline
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-4IH4-RRJI-LT14-MU70','2021.08.23 20.14.53',NULL,'user01','newMechantId',774.704344931387,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-VN4F-B6H2-IOG0-N8NL','2021.08.23 20.14.56',NULL,'user01','newMechantId',764.954993391854,'Payment','SberbankOnline')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-TERR-R4VT-2O25-WBYX','2021.08.23 20.14.59',NULL,'user01','newMechantId',96.5383141751114,'Payment','CardPayment')
-DB_Executing query: insert into Transactions (id,createdDateTime,lastModifiedDateTime,createdByUserId,mechantId,amount,operationTypeId,paymentMethodId)  values ('Transaction-NWNM-6P17-AOWD-KT5M','2021.08.23 20.15.01',NULL,'user01','newMechantId',877.355557343622,'Payment','SberbankOnline')
-DB_Executing query=Select * from Merchants 
-DB_Result is: hasRows=True
-_Merchant-1QN8-PSP9-3UG4-FHVA ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-5BLE-A2F7-MQEE-7UP5 ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
-_Merchant-9IX4-8J7W-PKQ5-HXAW ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-ABWD-PN5B-IKN8-01V2 ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-EASO-5C2C-PUL3-3MKU ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
-_Merchant-ELZF-YGE3-IJZQ-RMD9 ООО Вимос 2132188521  В этом магазине я покупал косилку
-_Merchant-GDPO-A17E-DE7M-ZYYC ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-JC3A-TXL8-LPW8-NLCJ ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
-DB_Executing query=Select * from Contracts 
-DB_Result is: hasRows=True
-_Contract-3ZCL-MF89-2MRJ-X980 Merchant-JC3A-TXL8-LPW8-NLCJ Contract-ZWC9 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-QI5U-0ZWU-YCHH-CDD7 Merchant-ELZF-YGE3-IJZQ-RMD9 Contract-8UZC 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-RCYS-XF5C-7A1K-84R9 Merchant-1QN8-PSP9-3UG4-FHVA Contract-GT44 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-VU9O-XUMA-Y27Z-YBS3 Merchant-5BLE-A2F7-MQEE-7UP5 Contract-LX24 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-XMYN-5CL1-K2GY-K3B8 Merchant-EASO-5C2C-PUL3-3MKU Contract-CDE2 01.01.0001 0:00:00 01.01.0001 0:00:00
-DB_Executing query=Select * from Transactions 
-DB_Result is: hasRows=True
-_Transaction-1F0R-IJJ4-CAMO-Y33F  721,406746525972 Payment SberbankOnline
-_Transaction-3TNA-6HFH-8BSZ-MH55  275,396513415219 Payment PaymentSystem
-_Transaction-4IH4-RRJI-LT14-MU70  774,704344931387 Payment SberbankOnline
-_Transaction-85Y5-W0PR-3E9Z-H0R5  24,5710201675869 Payment CardPayment
-_Transaction-AQVF-P2IP-9VQD-5K60  829,386280304466 Payment SberbankOnline
-_Transaction-IHE9-VAET-C360-B479  578,560787056834 Payment SberbankOnline
-_Transaction-JCU8-KY3N-GRTD-5ZCW  634,201540441346 Payment SberbankOnline
-_Transaction-JSLZ-4BUF-0A4P-YCMJ  188,191307330593 Payment CardPayment
-_Transaction-NWNM-6P17-AOWD-KT5M  877,355557343622 Payment SberbankOnline
-_Transaction-S844-I95W-DY9G-LATA  937,36581408296 Payment SberbankOnline
-_Transaction-TERR-R4VT-2O25-WBYX  96,5383141751114 Payment CardPayment
-_Transaction-V33M-OM19-6PPP-7217  219,755760030707 Payment CardPayment
-_Transaction-VN4F-B6H2-IOG0-N8NL  764,954993391854 Payment SberbankOnline
-_Transaction-XE2P-EO9I-7FNU-1P95  916,591486389093 Payment SberbankOnline
-DB_Executing query=Select * from Merchants 
-DB_Result is: hasRows=True
-_Merchant-1QN8-PSP9-3UG4-FHVA ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-5BLE-A2F7-MQEE-7UP5 ООО Магазин Пятерочка 4543186966514  Это наша Пятерка
-_Merchant-9IX4-8J7W-PKQ5-HXAW ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-ABWD-PN5B-IKN8-01V2 ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-EASO-5C2C-PUL3-3MKU ООО Леруа Мерлен СПб 890328903248  Это Леруа, в который мы все время ездим
-_Merchant-ELZF-YGE3-IJZQ-RMD9 ООО Вимос 2132188521  В этом магазине я покупал косилку
-_Merchant-GDPO-A17E-DE7M-ZYYC ООО Рога и Копыта 12345678925888  Фирма создана Остапом Бендером
-_Merchant-JC3A-TXL8-LPW8-NLCJ ООО Бутик Картин СПб 55908098908  Это люди, которые продают картины через интернет
-DB_Executing query=Select * from Contracts 
-DB_Result is: hasRows=True
-_Contract-3ZCL-MF89-2MRJ-X980 Merchant-JC3A-TXL8-LPW8-NLCJ Contract-ZWC9 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-QI5U-0ZWU-YCHH-CDD7 Merchant-ELZF-YGE3-IJZQ-RMD9 Contract-8UZC 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-RCYS-XF5C-7A1K-84R9 Merchant-1QN8-PSP9-3UG4-FHVA Contract-GT44 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-VU9O-XUMA-Y27Z-YBS3 Merchant-5BLE-A2F7-MQEE-7UP5 Contract-LX24 01.01.0001 0:00:00 01.01.0001 0:00:00
-_Contract-XMYN-5CL1-K2GY-K3B8 Merchant-EASO-5C2C-PUL3-3MKU Contract-CDE2 01.01.0001 0:00:00 01.01.0001 0:00:00
-DB_Executing query=Select * from Transactions 
-DB_Result is: hasRows=True
-_Transaction-1F0R-IJJ4-CAMO-Y33F  721,406746525972 Payment SberbankOnline
-_Transaction-3TNA-6HFH-8BSZ-MH55  275,396513415219 Payment PaymentSystem
-_Transaction-4IH4-RRJI-LT14-MU70  774,704344931387 Payment SberbankOnline
-_Transaction-85Y5-W0PR-3E9Z-H0R5  24,5710201675869 Payment CardPayment
-_Transaction-AQVF-P2IP-9VQD-5K60  829,386280304466 Payment SberbankOnline
-_Transaction-IHE9-VAET-C360-B479  578,560787056834 Payment SberbankOnline
-_Transaction-JCU8-KY3N-GRTD-5ZCW  634,201540441346 Payment SberbankOnline
-_Transaction-JSLZ-4BUF-0A4P-YCMJ  188,191307330593 Payment CardPayment
-_Transaction-NWNM-6P17-AOWD-KT5M  877,355557343622 Payment SberbankOnline
-_Transaction-S844-I95W-DY9G-LATA  937,36581408296 Payment SberbankOnline
-_Transaction-TERR-R4VT-2O25-WBYX  96,5383141751114 Payment CardPayment
-_Transaction-V33M-OM19-6PPP-7217  219,755760030707 Payment CardPayment
-_Transaction-VN4F-B6H2-IOG0-N8NL  764,954993391854 Payment SberbankOnline
-_Transaction-XE2P-EO9I-7FNU-1P95  916,591486389093 Payment SberbankOnline
+_Transaction-09DN-LE55-8NYA-B4OX  149,130529327844 Payment CardPayment
+_Transaction-2G2L-BDUO-0U8V-87NE  790,325502301718 Payment SberbankOnline
+_Transaction-2MMS-CFSX-K6MY-OUN5  703,120296217091 Payment SberbankOnline
+_Transaction-6RFA-YG5R-M2QW-BR60  93,4897759433322 Payment CardPayment
+_Transaction-GL54-7LAU-BPEB-1UTO  539,500009054085 Payment SberbankOnline
+_Transaction-GPEJ-PSZE-A0MY-P8SE  647,479542832579 Payment SberbankOnline
+_Transaction-L6HY-R5VT-VM1H-3JJY  257,110063106339 Payment PaymentSystem
+_Transaction-M8MS-MZOK-0MJU-T301  452,294802969459 Payment PaymentSystem
+_Transaction-QB45-60LG-D5KM-7K7T  6,28456985870589 Payment CardPayment
+_Transaction-ZDAC-DG8Y-JKNL-MUB2  344,315269190965 Payment PaymentSystem

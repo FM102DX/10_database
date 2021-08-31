@@ -3,58 +3,53 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using RIFDC;
-using CommonFunctions;
+using RIFDC.CommonFunctions;
+using RIFDC.CommonFunctions.Logger;
 
 namespace PaymentServiceDemo_OtusHomeWork_Lecture14
 {
-    
     class Program
     {
-
         static void Main(string[] args)
         {
             PaymentServiceDemoApp.Run();
-            
         }
-
     }
     public static class PaymentServiceDemoApp
     {
-        public static IDataRoom mainDataRoom = new DataRoom();
-
-        public static MySqlCluster_MySqlConnectorNET cls_mysql = new MySqlCluster_MySqlConnectorNET();
+        public static IDataRoom MainDataRoom = Repository.GetFinAppDataRoom();
 
         public static void Run()
         {
-            initApp();
+            InitApp();
 
             string clientReply = "";
 
             do
             {
-                showMenu();
+                ShowMenu();
                 clientReply = Console.ReadLine().ToString();
 
                 switch (clientReply)
                 {
                     case "1":
-                        fillTestData();
+                        FillTestData();
                         break;
 
                     case "2":
-                        showTableContents();
+                        ShowTableContents();
                         break;
 
                     case "3":
-                        addClient();
+                        AddClient();
                         break;
 
                     case "4":
-                        addTransaction();
+                        AddTransaction();
                         break;
 
                     case "5":
-                        addContract();
+                        AddContract();
                         break;
 
                     case "6":
@@ -64,7 +59,6 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
                     case "9":
 
                         break;
-
                 }
 
                 if (clientReply == "9")
@@ -79,16 +73,17 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
 
             Console.ReadKey();
 
-            mainDataRoom.disconnect();
+            MainDataRoom.disconnect();
+
             return;
 
         }
 
-        static void say(string s)
+        static void Say(string s)
         {
             Console.WriteLine(s);
         }
-        static void showMenu()
+        static void ShowMenu()
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("");
@@ -106,28 +101,33 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
         }
 
 
-        public static void initApp()
+        public static void InitApp()
         {
             //Logger.logDirection = Logger.logDirectionEnum.bothToConAndFile;
             // Logger.fileName = @"\..\..\Logs.txt";
 
             Console.WriteLine("Инициализация приложения");
-            Logger.logDirection = DynamicLogger.logDirectionEnum.bothToConAndFile;
+            Logger.logDirection = LogDirectionEnum.bothToConAndFile;
+
             Logger.fileName = @"..\..\..\PaymentServiceLogs.txt";
             Logger.prepare();
-
-            cls_mysql.connectionData.server = "37.140.192.97";
+            
+            /*
+            
+            MySqlCluster.connectionData.server = "37.140.192.97";
             //cls_mysql.connectionData.port = "3306";
-            cls_mysql.connectionData.dbName = "u1325524_paymentservicedemo";
-            cls_mysql.connectionData.dbUser = "u1325524_paymentservicedemo_user01";
-            cls_mysql.connectionData.dbPassword = "2qT5!d6i";
+            MySqlCluster.connectionData.dbName = "u1325524_paymentservicedemo";
+            MySqlCluster.connectionData.dbUser = "u1325524_paymentservicedemo_user01";
+            MySqlCluster.connectionData.dbPassword = "2qT5!d6i";
 
-            RIFDC_App.mainDataRoom = mainDataRoom;
+            RIFDC_App.mainDataRoom = MainDataRoom;
             RIFDC_App.currentUserId = "user01";
 
-            mainDataRoom.actualCluster = cls_mysql;
+            MainDataRoom.actualCluster = MySqlCluster;
 
-            Lib.DbOperationResult or = mainDataRoom.connect();
+            */
+
+            Lib.DbOperationResult or = MainDataRoom.connect();
 
             if (!or.success)
             {
@@ -135,19 +135,16 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
                 Console.WriteLine(or.msg);
                 return;
             }
-
             Console.WriteLine("Инициализация БД успешна");
-
         }
 
-
-        public static void fillTestData()
+        public static void FillTestData()
         {
             Console.WriteLine("");
             Console.WriteLine("Заполняем тестовые данные");
             Console.WriteLine("Мерчанты");
 
-            ItemKeeper<Merchamt> merchants = ItemKeeper<Merchamt>.getInstance(mainDataRoom, true);
+            ItemKeeper<Merchamt> merchants = ItemKeeper<Merchamt>.getInstance(MainDataRoom, true);
 
             if (!merchants.myStatusIsOk) return;
 
@@ -191,7 +188,7 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
             Console.WriteLine("");
             Console.WriteLine("Договоры");
 
-            ItemKeeper<Contract> contracts = ItemKeeper<Contract>.getInstance(mainDataRoom, true);
+            ItemKeeper<Contract> contracts = ItemKeeper<Contract>.getInstance(MainDataRoom, true);
             if (!contracts.myStatusIsOk) return;
             IKeepable contract1;
 
@@ -207,7 +204,7 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
 
             Console.WriteLine("");
             Console.WriteLine("Транзакции");
-            ItemKeeper<Transaction> transactions = ItemKeeper<Transaction>.getInstance(mainDataRoom, true);
+            ItemKeeper<Transaction> transactions = ItemKeeper<Transaction>.getInstance(MainDataRoom, true);
             if (!transactions.myStatusIsOk) return;
             IKeepable transaction1;
 
@@ -222,24 +219,24 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
             }
         }
 
-        public static void showTableContents()
+        public static void ShowTableContents()
         {
             //показать содержимое таблиц
             Console.WriteLine("");
             Console.WriteLine("Клиенты");
-            ItemKeeper<Merchamt> merchants = ItemKeeper<Merchamt>.getInstance(mainDataRoom, false);
+            ItemKeeper<Merchamt> merchants = ItemKeeper<Merchamt>.getInstance(MainDataRoom, false);
             merchants.readItems();
             merchants.simpleObjectDump();
 
             Console.WriteLine("");
             Console.WriteLine("Контракты");
-            ItemKeeper<Contract> contracts = ItemKeeper<Contract>.getInstance(mainDataRoom, false);
+            ItemKeeper<Contract> contracts = ItemKeeper<Contract>.getInstance(MainDataRoom, false);
             contracts.readItems();
             contracts.simpleObjectDump();
 
             Console.WriteLine("");
             Console.WriteLine("Транзакции");
-            ItemKeeper<Transaction> transactions = ItemKeeper<Transaction>.getInstance(mainDataRoom, false);
+            ItemKeeper<Transaction> transactions = ItemKeeper<Transaction>.getInstance(MainDataRoom, false);
             transactions.readItems();
             transactions.simpleObjectDump();
 
@@ -247,13 +244,13 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
         }
 
 
-        public static void addClient()
+        public static void AddClient()
         {
 
             Console.WriteLine("");
             Console.WriteLine("Добавляем клиента");
 
-            ItemKeeper<Merchamt> merchants = ItemKeeper<Merchamt>.getInstance(mainDataRoom);
+            ItemKeeper<Merchamt> merchants = ItemKeeper<Merchamt>.getInstance(MainDataRoom);
 
             if (!merchants.myStatusIsOk) return;
 
@@ -271,13 +268,13 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
         }
 
 
-        public static void addContract()
+        public static void AddContract()
         {
 
             Console.WriteLine("");
             Console.WriteLine("Добавляем контракт");
 
-            ItemKeeper<Contract> contracts = ItemKeeper<Contract>.getInstance(mainDataRoom);
+            ItemKeeper<Contract> contracts = ItemKeeper<Contract>.getInstance(MainDataRoom);
             if (!contracts.myStatusIsOk) return;
             IKeepable contract1;
 
@@ -291,12 +288,12 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
             Console.WriteLine("");
         }
 
-        public static void addTransaction()
+        public static void AddTransaction()
         {
             Console.WriteLine("");
             Console.WriteLine("Добавляем транзакцию");
 
-            ItemKeeper<Transaction> transactions = ItemKeeper<Transaction>.getInstance(mainDataRoom);
+            ItemKeeper<Transaction> transactions = ItemKeeper<Transaction>.getInstance(MainDataRoom);
             if (!transactions.myStatusIsOk) return;
             IKeepable transaction1;
 
@@ -310,6 +307,4 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
             Console.WriteLine("");
         }
     }
-
-
 }

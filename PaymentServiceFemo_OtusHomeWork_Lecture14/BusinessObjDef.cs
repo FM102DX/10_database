@@ -55,10 +55,10 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
 
     class Contract : KeepableClass, IKeepable
     {
-        public string merchantId;
-        public string contractNumber;
-        public string contractSignDate;
-        public string contractExiryDate;
+        public string MerchantId;
+        public string ContractNumber;
+        public string ContractSignDate;
+        public string ContractExiryDate;
 
         public override string tableName { get { return "Contracts"; } }
         public override string entityName { get { return "Contract"; } }
@@ -93,23 +93,23 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
         {
             get
             {
-                return contractNumber;
+                return ContractNumber;
             }
         }
 
         public override string getMyStringRepresentation()
         {
-            return $"{id} {merchantId} {contractNumber} {contractSignDate} {contractExiryDate}";
+            return $"{id} {MerchantId} {ContractNumber} {ContractSignDate} {ContractExiryDate}";
         }
 
     }
 
     class Transaction : KeepableClass, IKeepable
     {
-        public string merchantId;
-        public double amount;
-        public string operationTypeId;
-        public string paymentMethodId;
+        public string MerchantId;
+        public double Amount;
+        public string OperationTypeId;
+        public string PaymentMethodId;
 
 
         public override string tableName { get { return "Transactions"; } }
@@ -120,19 +120,18 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
             Lib.FieldInfo x;
             Lib.FieldsInfo f = this.getInitialFieldsInfoObject();
 
-            x = f.addFieldInfoObject("mechantId", "mechantId", Lib.FieldTypeEnum.String);
+            x = f.addFieldInfoObject("MechantId", "MechantId", Lib.FieldTypeEnum.String);
             x.nullabilityInfo.allowNull = false;
-            x.nullabilityInfo.defaultValue = "newMechantId";
+            x.nullabilityInfo.defaultValue = "NewMechantId";
 
-            x = f.addFieldInfoObject("amount", "amount", Lib.FieldTypeEnum.Double);
-            x.nullabilityInfo.allowNull = false;
-
-            x = f.addFieldInfoObject("operationTypeId", "operationTypeId", Lib.FieldTypeEnum.String);
+            x = f.addFieldInfoObject("Amount", "Amount", Lib.FieldTypeEnum.Double);
             x.nullabilityInfo.allowNull = false;
 
-            x = f.addFieldInfoObject("paymentMethodId", "paymentMethodId", Lib.FieldTypeEnum.String);
+            x = f.addFieldInfoObject("OperationTypeId", "OperationTypeId", Lib.FieldTypeEnum.String);
             x.nullabilityInfo.allowNull = false;
 
+            x = f.addFieldInfoObject("PaymentMethodId", "PaymentMethodId", Lib.FieldTypeEnum.String);
+            x.nullabilityInfo.allowNull = false;
 
             return f;
         }
@@ -147,7 +146,7 @@ namespace PaymentServiceDemo_OtusHomeWork_Lecture14
 
         public override string getMyStringRepresentation()
         {
-            return $"{id} {merchantId} {amount} {operationTypeId} {paymentMethodId}";
+            return $"{id} {MerchantId} {Amount} {OperationTypeId} {PaymentMethodId}";
         }
 
     }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CommonFunctions\COMMONFUNCTIONS_DLL.csproj" />
-    <ProjectReference Include="..\RIFDC\RIFDC_DLL.csproj" />
+    <PackageReference Include="RIFDC.ORM.BOMS" Version="1.0.2" />
   </ItemGroup>
 
 </Project>
